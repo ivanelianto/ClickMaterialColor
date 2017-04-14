@@ -1,0 +1,26 @@
+/*************************/
+/*						 */
+/*     The tab bar       */
+/*						 */
+/*************************/
+
+.jfx-tab-pane .headers-region 
+{
+    -fx-background-color: #546E7A;
+}
+
+.jfx-tab-pane .tab-header-background 
+{
+    -fx-background-color: #546E7A;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler
+{
+    -jfx-rippler-fill: #FFFFFF;
+}
+
+.jfx-tab-pane .tab-selected-line 
+{
+    -fx-stroke: #CFD8DC;
+    -fx-stroke-width: 2pt;
+}

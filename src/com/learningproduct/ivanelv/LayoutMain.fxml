@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainStackPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.learningproduct.ivanelv.Controller">
+   <children>
+      <AnchorPane prefHeight="685.0" prefWidth="400.0">
+          <children>
+              <Pane prefHeight="84.0" prefWidth="400.0" style="-fx-background-color: #263238;">
+                  <children>
+                  <FlowPane fx:id="notificationBar" alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="340.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ic_info_outline_white_24dp_2x.png" />
+                           </image>
+                           <FlowPane.margin>
+                              <Insets left="5.0" top="2.5" />
+                           </FlowPane.margin>
+                        </ImageView>
+                        <Label fx:id="notificationBarLabel" text="Label" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <FlowPane.margin>
+                              <Insets left="2.5" top="2.5" />
+                           </FlowPane.margin>
+                        </Label>
+                     </children>
+                  </FlowPane>
+                  <ImageView fx:id="controlButtonIconify" fitHeight="20.0" fitWidth="20.0" layoutX="349.0" layoutY="4.0" onMouseClicked="#onIconify" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic_remove_black_24dp_2x.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="controlButtonClose" fitHeight="20.0" fitWidth="20.0" layoutX="376.0" layoutY="4.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic_clear_black_24dp_2x.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <AnchorPane layoutY="25.0" prefHeight="59.0" prefWidth="400.0" style="-fx-background-color: #37474F;">
+                     <children>
+                            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="15.0" text="Material Color Picker Tool" textAlignment="CENTER" textFill="WHITE">
+                                <font>
+                                    <Font name="Roboto Regular" size="22.0" />
+                                </font>
+                            </Label>
+                        <JFXButton fx:id="buttonInfo" contentDisplay="GRAPHIC_ONLY" disable="true" focusTraversable="false" layoutX="355.0" layoutY="10.0" onAction="#onInfo" prefHeight="40.0" prefWidth="40.0" ripplerFill="WHITE" style="-fx-background-size: 40px; -fx-background-position: 100%; -fx-background-radius: 20px; -fx-background-color: #37474F;" styleClass="infoIcon" stylesheets="@style.css" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                  <image>
+                                      <Image url="@ic_info_outline_white_24dp_2x.png" />
+                                  </image>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </ImageView>
+                           </graphic></JFXButton>
+                        <JFXButton fx:id="buttonInfo1" contentDisplay="GRAPHIC_ONLY" disable="true" focusTraversable="false" layoutX="310.0" layoutY="10.0" onAction="#onInfo" prefHeight="40.0" prefWidth="40.0" ripplerFill="WHITE" style="-fx-background-size: 40px; -fx-background-color: #37474f; -fx-background-position: 100%; -fx-background-radius: 20px;" styleClass="infoIcon" stylesheets="@style.css" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@ic_help_outline_white_24dp_2x.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </AnchorPane>
+                  </children>
+              </Pane>
+              <JFXTabPane layoutY="84.0" maxHeight="520.0" maxWidth="400.0" minHeight="520.0" minWidth="400.0" prefHeight="520.0" prefWidth="400.0" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="40.0" tabMaxWidth="200.0" tabMinHeight="40.0" tabMinWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+                  <tabs>
+                      <Tab text="Red">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFEBEE;" text="#FFEBEE" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFCDD2;" text="#FFCDD2" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EF9A9A;" text="#EF9A9A" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E57373;" text="#E57373" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EF5350;" text="#EF5350" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F44336;" text="#F44336" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E53935;" text="#E53935" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D32F2F;" text="#D32F2F" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C62828;" text="#C62828" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B71C1C;" text="#B71C1C" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF8A80;" text="#FF8A80" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF5252;" text="#FF5252" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF1744;" text="#FF1744" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D50000;" text="#D50000" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Pink">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FCE4EC;" text="#FCE4EC" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFCDD2;" text="#FFCDD2" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F48FB1;" text="#F48FB1" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F06292;" text="#F06292" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EC407A;" text="#EC407A" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E91E63;" text="#E91E63" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D81B60;" text="#D81B60" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C2185B;" text="#C2185B" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #AD1457;" text="#AD1457" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #880E4F;" text="#880E4F" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF80AB;" text="#FF80AB" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF4081;" text="#FF4081" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F50057;" text="#F50057" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C51162;" text="#C51162" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Purple">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F3E5F5;" text="#F3E5F5" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E1BEE7;" text="#E1BEE7" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #CE93D8;" text="#CE93D8" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #BA68C8;" text="#BA68C8" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #AB47BC;" text="#AB47BC" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #9C27B0;" text="#9C27B0" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #8E24AA;" text="#8E24AA" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #7B1FA2;" text="#7B1FA2" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #6A1B9A;" text="#6A1B9A" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #4A148C;" text="#4A148C" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EA80FC;" text="#EA80FC" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E040FB;" text="#E040FB" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D500F9;" text="#D500F9" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #AA00FF;" text="#AA00FF" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Deep Purple">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EDE7F6;" text="#EDE7F6" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D1C4E9;" text="#D1C4E9" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B39DDB;" text="#B39DDB" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #9575CD;" text="#9575CD" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #7E57C2;" text="#7E57C2" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #673AB7;" text="#673AB7" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #5E35B1;" text="#5E35B1" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #512DA8;" text="#512DA8" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #4527A0;" text="#4527A0" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #311B92;" text="#311B92" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B388FF;" text="#B388FF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #7C4DFF;" text="#7C4DFF" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #651FFF;" text="#651FFF" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #6200EA;" text="#6200EA" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Indigo">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E8EAF6;" text="#E8EAF6" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C5CAE9;" text="#C5CAE9" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #9FA8DA;" text="#9FA8DA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #7986CB;" text="#7986CB" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #5C6BC0;" text="#5C6BC0" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #3F51B5;" text="#3F51B5" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #3949AB;" text="#3949AB" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #303F9F;" text="#303F9F" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #283593;" text="#283593" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #1A237E;" text="#1A237E" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #8C9EFF;" text="#8C9EFF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #536DFE;" text="#536DFE" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #3D5AFE;" text="#3D5AFE" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #304FFE;" text="#304FFE" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Blue">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E3F2FD;" text="#E3F2FD" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #BBDEFB;" text="#BBDEFB" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #90CAF9;" text="#90CAF9" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #64B5F6;" text="#64B5F6" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #42A5F5;" text="#42A5F5" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #2196F3;" text="#2196F3" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #1E88E5;" text="#1E88E5" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #1976D2;" text="#1976D2" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #1565C0;" text="#1565C0" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #0D47A1;" text="#0D47A1" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #82B1FF;" text="#82B1FF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #448AFF;" text="#448AFF" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #2979FF;" text="#2979FF" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #2962FF;" text="#2962FF" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Light Blue">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E1F5FE;" text="#E1F5FE" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B3E5FC;" text="#B3E5FC" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #81D4FA;" text="#81D4FA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #4FC3F7;" text="#4FC3F7" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #29B6F6;" text="#29B6F6" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #03A9F4;" text="#03A9F4" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #039BE5;" text="#039BE5" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #0288D1;" text="#0288D1" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #0277BD;" text="#0277BD" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #01579B;" text="#01579B" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #80D8FF;" text="#80D8FF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #40C4FF;" text="#40C4FF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00B0FF;" text="#00B0FF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #0091EA;" text="#0091EA" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Cyan">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E0F7FA;" text="#E0F7FA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B2EBF2;" text="#B2EBF2" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #80DEEA;" text="#80DEEA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #4DD0E1;" text="#4DD0E1" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #26C6DA;" text="#26C6DA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00BCD4;" text="#00BCD4" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00ACC1;" text="#00ACC1" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #0097A7;" text="#0097A7" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00838F;" text="#00838F" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #006064;" text="#006064" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #84FFFF;" text="#84FFFF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #18FFFF;" text="#18FFFF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00E5FF;" text="#00E5FF" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00B8D4;" text="#00B8D4" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Teal">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E0F2F1;" text="#E0F2F1" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B2DFDB;" text="#B2DFDB" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #80CBC4;" text="#80CBC4" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #4DB6AC;" text="#4DB6AC" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #26A69A;" text="#26A69A" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #009688;" text="#009688" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00897B;" text="#00897B" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00796B;" text="#00796B" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00695C;" text="#00695C" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #004D40;" text="#004D40" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #A7FFEB;" text="#A7FFEB" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #64FFDA;" text="#64FFDA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #1DE9B6;" text="#1DE9B6" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00BFA5;" text="#00BFA5" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Green">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E8F5E9;" text="#E8F5E9" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C8E6C9;" text="#C8E6C9" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #A5D6A7;" text="#A5D6A7" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #81C784;" text="#81C784" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #66BB6A;" text="#66BB6A" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #4CAF50;" text="#4CAF50" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #43A047;" text="#43A047" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #388E3C;" text="#388E3C" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #2E7D32;" text="#2E7D32" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #1B5E20;" text="#1B5E20" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B9F6CA;" text="#B9F6CA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #69F0AE;" text="#69F0AE" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00E676;" text="#00E676" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #00C853;" text="#00C853" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Light Green">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F1F8E9;" text="#F1F8E9" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #DCEDC8;" text="#DCEDC8" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C5E1A5;" text="#C5E1A5" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #AED581;" text="#AED581" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #9CCC65;" text="#9CCC65" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #8BC34A;" text="#8BC34A" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #7CB342;" text="#7CB342" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #7CB342;" text="#7CB342" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #558B2F;" text="#558B2F" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #33691E;" text="#33691E" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #CCFF90;" text="#CCFF90" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B2FF59;" text="#B2FF59" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #76FF03;" text="#76FF03" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #64DD17;" text="#64DD17" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Lime">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F9FBE7;" text="#F9FBE7" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F0F4C3;" text="#F0F4C3" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E6EE9C;" text="#E6EE9C" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #DCE775;" text="#DCE775" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D4E157;" text="#D4E157" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #CDDC39;" text="#CDDC39" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C0CA33;" text="#C0CA33" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #AFB42B;" text="#AFB42B" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #9E9D24;" text="#9E9D24" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #827717;" text="#827717" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F4FF81;" text="#F4FF81" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EEFF41;" text="#EEFF41" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #C6FF00;" text="#C6FF00" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #AEEA00;" text="#AEEA00" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Yellow">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFFDE7;" text="#FFFDE7" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFF9C4;" text="#FFF9C4" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFF59D;" text="#FFF59D" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFF176;" text="#FFF176" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFEE58;" text="#FFEE58" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFEB3B;" text="#FFEB3B" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FDD835;" text="#FDD835" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FBC02D;" text="#FBC02D" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F9A825;" text="#F9A825" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F57F17;" text="#F57F17" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFFF8D;" text="#FFFF8D" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFFF00;" text="#FFFF00" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFEA00;" text="#FFEA00" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFD600;" text="#FFD600" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Amber">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFF8E1;" text="#FFF8E1" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFECB3;" text="#FFECB3" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFE082;" text="#FFE082" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFD54F;" text="#FFD54F" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFCA28;" text="#FFCA28" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFC107;" text="#FFC107" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFB300;" text="#FFB300" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFA000;" text="#FFA000" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF8F00;" text="#FF8F00" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF6F00;" text="#FF6F00" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFE57F;" text="#FFE57F" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFD740;" text="#FFD740" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFC400;" text="#FFC400" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFAB00;" text="#FFAB00" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Orange">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFF3E0;" text="#FFF3E0" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFE0B2;" text="#FFE0B2" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFCC80;" text="#FFCC80" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFB74D;" text="#FFB74D" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFA726;" text="#FFA726" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF9800;" text="#FF9800" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FB8C00;" text="#FB8C00" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F57C00;" text="#F57C00" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EF6C00;" text="#EF6C00" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E65100;" text="#E65100" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFD180;" text="#FFD180" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFAB40;" text="#FFAB40" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF9100;" text="#FF9100" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF6D00;" text="#FF6D00" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Deep Orange">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FBE9E7;" text="#FBE9E7" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFCCBC;" text="#FFCCBC" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FFAB91;" text="#FFAB91" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF8A65;" text="#FF8A65" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF7043;" text="#FF7043" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF5722;" text="#FF5722" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F4511E;" text="#F4511E" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E64A19;" text="#E64A19" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D84315;" text="#D84315" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #BF360C;" text="#BF360C" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF9E80;" text="#FF9E80" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF6E40;" text="#FF6E40" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FF3D00;" text="#FF3D00" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #DD2C00;" text="#DD2C00" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Brown">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EFEBE9;" text="#EFEBE9" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #D7CCC8;" text="#D7CCC8" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #BCAAA4;" text="#BCAAA4" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #A1887F;" text="#A1887F" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #8D6E63;" text="#8D6E63" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #795548;" text="#795548" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #6D4C41;" text="#6D4C41" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #5D4037;" text="#5D4037" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #4E342E;" text="#4E342E" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #3E2723;" text="#3E2723" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Grey">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #FAFAFA;" text="#FAFAFA" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #F5F5F5;" text="#F5F5F5" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #EEEEEE;" text="#EEEEEE" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #E0E0E0;" text="#E0E0E0" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #BDBDBD;" text="#BDBDBD" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #9E9E9E;" text="#9E9E9E" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #757575;" text="#757575" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #616161;" text="#616161" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #424242;" text="#424242" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #212121;" text="#212121" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                      <Tab text="Blue Grey">
+                          <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                  <children>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #ECEFF1;" text="#ECEFF1" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #CFD8DC;" text="#CFD8DC" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #B0BEC5;" text="#B0BEC5" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #90A4AE;" text="#90A4AE" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #78909C;" text="#78909C" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #607D8B;" text="#607D8B" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #546E7A;" text="#546E7A" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #455A64;" text="#455A64" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #37474F;" text="#37474F" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                      <JFXButton focusTraversable="false" maxHeight="40.0" maxWidth="400.0" minHeight="40.0" minWidth="400.0" onAction="#copyHexColorToClipboard" prefHeight="40.0" prefWidth="400.0" ripplerFill="#0000001a" style="-fx-background-color: #263238;" text="#263238" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Roboto Light" size="14.0" />
+                                          </font>
+                                      </JFXButton>
+                                  </children>
+                              </VBox>
+                          </content>
+                      </Tab>
+                  </tabs>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+              </JFXTabPane>
+          </children>
+      </AnchorPane>
+   </children>
+</StackPane>
